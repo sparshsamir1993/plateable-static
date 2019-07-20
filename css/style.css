@@ -144,6 +144,10 @@ nav .brand-name {
 }
 /***************************** FOR PHONES *****************************/
 @media (max-width: 700px) {
+  .landing {
+    background-size: cover;
+  }
+
   .day-boxes {
     flex-direction: column;
     margin-top: 10px;
