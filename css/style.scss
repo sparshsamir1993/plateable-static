@@ -1,0 +1,190 @@
+html{
+	height: 100%;
+}
+body{
+	min-height: 100%;
+	margin:0;
+}
+/*************************** FONTS ********************/
+
+@font-face{
+	font-family: Caveat;
+	src: url(../assets/Caveat/Caveat-Regular.ttf);
+
+}
+@font-face{
+    font-family: quicksand;
+    src: url("../assets/Quicksand/Quicksand-Regular.ttf")
+}
+/******************* LOADER ********************/
+nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    color: white;
+    animation: fade-in 1s ease-in;
+    .brand-name{
+        font-family: Caveat;
+        font-size: 50px;
+        margin: 10px 0 0 10px;
+    }
+}
+
+.landing{
+    height: 100vh;
+    background: url("../assets/img/indian-food-bg.jpg");
+    background-size: cover;
+    position: relative;
+}
+.grey-overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.577);
+}
+.days-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-family: quicksand;
+    font-size: 30px;
+    animation: fade-in 1s ease-in;
+    width: 100%;
+
+    span{
+        font-family: Caveat;
+        font-size: 45px;
+    }
+}
+.welcome{
+    text-align: center;
+}
+.day-boxes{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+
+    .box{
+        height: 200px;
+        width: 200px;
+        border: 1px solid white;
+        position: relative;
+        color: white;
+        cursor: pointer;
+        span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 55%;
+        }
+        .description{
+            font-size: 20px;
+            width: 90%;
+            top: 60%;
+            font-family: quicksand;
+        }
+
+        &:nth-child(1){
+            .image{
+                background: url(../assets/img/order.svg);
+                height: 35%;
+                width: 45%;
+                margin: 0 auto;
+            }
+        }
+        &:nth-child(2){
+            .image{
+                // background: url(../assets/img/delivery.svg);
+                height: 50%;
+                width: 45%;
+                margin: 0 auto;
+            }
+        }
+        &:nth-child(3){
+            .image{
+                background: url(../assets/img/final-delivery.svg);
+                height: 36%;
+                width: 44%;
+                margin: 0 auto;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .process-width{
+        height: 300px;
+        width: 25%;
+        background:rgba(0, 0, 0, 0.677);
+    }    
+}
+.day-choice{
+    height: 100vh;
+    background: black;
+    position: relative;
+}
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/***************************** FOR PHONES *****************************/
+
+@media  (max-width: 700px) {
+    .day-boxes{
+        flex-direction: column;
+        margin-top: 10px;
+        .box{
+            margin: 0 auto;
+            width: 70%;
+
+            .description{
+                font-size: 15px;
+            }
+
+
+        }
+        .process-width{
+            height: 150px;
+            &:nth-child(1){
+                .image{
+                    width: 20%;
+                    margin-top: 5px;
+                }
+            }
+            &:nth-child(2){
+                .image{
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            &:nth-child(3){
+                .image{
+                    width: 20%;
+                }
+            }
+        }
+    }
+    .day-choice{
+        height: 130vh;
+    }
+    .days-wrap{
+        top: 55%;
+    }
+    .welcome{
+        font-size: 20px;
+    }
+}
