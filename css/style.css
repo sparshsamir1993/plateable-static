@@ -34,8 +34,9 @@ nav .brand-name {
 .landing {
   height: 100vh;
   background: url("../assets/img/indian-food-bg.jpg");
-  background-size: cover;
   position: relative;
+  animation: background-zoomin 1s ease-in forwards;
+  background-position: 50% 50%;
 }
 
 .grey-overlay {
@@ -95,7 +96,7 @@ nav .brand-name {
 .day-boxes .box:nth-child(1) .image {
   background: url(../assets/img/order.svg);
   height: 35%;
-  width: 45%;
+  width: 30%;
   margin: 0 auto;
 }
 .day-boxes .box:nth-child(2) .image {
@@ -106,7 +107,7 @@ nav .brand-name {
 .day-boxes .box:nth-child(3) .image {
   background: url(../assets/img/final-delivery.svg);
   height: 36%;
-  width: 44%;
+  width: 30%;
   margin: 0 auto;
 }
 .day-boxes .box:nth-child(3) .image img {
@@ -131,6 +132,14 @@ nav .brand-name {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes background-zoomin {
+  0% {
+    background-size: 120% 120%;
+  }
+  100% {
+    background-size: 100% 100%;
   }
 }
 /***************************** FOR PHONES *****************************/
