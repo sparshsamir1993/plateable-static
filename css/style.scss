@@ -134,9 +134,10 @@ nav{
 
 .modal-btn{
     margin: 20px 0 20px 0;;
-    button{
+    a{
         margin: 0 auto;
         display: block;
+        width: 40%;
     }
 
 }
@@ -210,12 +211,21 @@ nav{
         }
     }
     .day-choice{
-        height: 130vh;
+        height: 150vh;
     }
     .days-wrap{
         top: 55%;
     }
     .welcome{
         font-size: 20px;
+    }
+
+    .modal-dialog{
+        margin: 0 auto;
+        max-width: 85%;
+    }
+    .nav-link, .navbar-brand{
+        font-size: 12px;
+        padding: 5px;
     }
 }
