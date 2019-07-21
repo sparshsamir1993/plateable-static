@@ -126,6 +126,22 @@ nav .brand-name {
   position: relative;
 }
 
+.modal-btn {
+  margin: 20px 0 20px 0;
+}
+.modal-btn button {
+  margin: 0 auto;
+  display: block;
+}
+
+.modal-dialog {
+  max-width: 70%;
+}
+
+#extras span {
+  font-size: 12px;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
