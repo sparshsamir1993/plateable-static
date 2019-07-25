@@ -28,15 +28,18 @@ nav {
 nav .brand-name {
   font-family: Caveat;
   font-size: 50px;
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 20px;
 }
 
 .landing {
-  height: 100vh;
+  min-height: 100vh;
   background: url("../assets/img/indian-food-bg.jpg");
   position: relative;
   animation: background-zoomin 1s ease-in forwards;
   background-position: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .grey-overlay {
@@ -48,10 +51,6 @@ nav .brand-name {
 }
 
 .days-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
   color: white;
   font-family: quicksand;
   font-size: 30px;
@@ -65,6 +64,17 @@ nav .brand-name {
 
 .welcome {
   text-align: center;
+  position: relative;
+}
+
+.all-center {
+  text-align: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+#mains-nv, #mains-v, #sides, #extras {
+  text-align: center;
 }
 
 .day-boxes {
@@ -74,54 +84,70 @@ nav .brand-name {
 }
 .day-boxes .box {
   height: 200px;
-  width: 200px;
+  width: 250px;
   border: 1px solid white;
   position: relative;
   color: white;
   cursor: pointer;
-}
-.day-boxes .box span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: 55%;
+  border-radius: 7px;
 }
 .day-boxes .box .description {
   font-size: 20px;
   width: 90%;
   top: 60%;
   font-family: quicksand;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.day-boxes .box span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.day-boxes .box:hover {
+  transition: all 0.5s ease;
+  background: white;
+  color: black;
+  -webkit-box-shadow: 0px 0px 23px 30px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 0px 0px 23px 30px rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0px 23px 30px rgba(255, 255, 255, 0.75);
 }
 .day-boxes .box:nth-child(1) .image {
   background: url(../assets/img/order.svg);
-  height: 35%;
-  width: 30%;
+  height: 100px;
+  width: 100px;
   margin: 0 auto;
+  margin-top: 10px;
 }
 .day-boxes .box:nth-child(2) .image {
-  height: 50%;
-  width: 45%;
+  background: url(../assets/img/delivery.svg);
+  height: 100px;
+  width: 100px;
   margin: 0 auto;
+  margin-top: 10px;
 }
 .day-boxes .box:nth-child(3) .image {
   background: url(../assets/img/final-delivery.svg);
-  height: 36%;
-  width: 30%;
+  height: 100px;
+  width: 100px;
   margin: 0 auto;
+  margin-top: 10px;
 }
 .day-boxes .box:nth-child(3) .image img {
   width: 100%;
   height: 100%;
 }
 .day-boxes .process-width {
-  height: 300px;
+  min-height: 250px;
   width: 25%;
   background: rgba(0, 0, 0, 0.677);
 }
 
 .day-choice {
-  height: 100vh;
+  height: auto;
   background: black;
   position: relative;
 }
@@ -141,6 +167,20 @@ nav .brand-name {
 
 #extras span {
   font-size: 12px;
+}
+
+.days-wrap {
+  overflow: auto;
+}
+.days-wrap .welcome {
+  margin-top: 80px;
+}
+.days-wrap .day-boxes {
+  margin-bottom: 50px;
+}
+
+.modal-header {
+  background-color: #cecece;
 }
 
 @keyframes fade-in {
@@ -173,27 +213,30 @@ nav .brand-name {
   .day-boxes .box {
     margin: 0 auto;
     width: 70%;
+    margin-bottom: 10px;
   }
   .day-boxes .box .description {
     font-size: 15px;
   }
   .day-boxes .process-width {
-    height: 150px;
+    height: auto;
+    margin-bottom: 10px;
   }
   .day-boxes .process-width:nth-child(1) .image {
-    width: 20%;
     margin-top: 5px;
   }
   .day-boxes .process-width:nth-child(2) .image img {
     width: 100%;
     height: 100%;
   }
-  .day-boxes .process-width:nth-child(3) .image {
-    width: 20%;
+  .day-boxes .process-width:nth-child(3) {
+    margin-bottom: 30px;
   }
-
   .day-choice {
-    height: 150vh;
+    height: auto;
+  }
+  .day-choice .welcome {
+    margin-bottom: 20px;
   }
 
   .days-wrap {
@@ -202,6 +245,7 @@ nav .brand-name {
 
   .welcome {
     font-size: 20px;
+    margin-top: 70px;
   }
 
   .modal-dialog {
